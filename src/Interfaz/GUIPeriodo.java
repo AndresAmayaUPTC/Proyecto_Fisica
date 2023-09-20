@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-class GUIPeriodo extends JFrame{
+public class GUIPeriodo extends JFrame{
 
   private JButton btnFormula1, btnFormula2, btnFormula3;
   private JTextField descripcion1,descripcion2,descripcion3;

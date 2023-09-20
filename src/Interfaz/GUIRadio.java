@@ -6,7 +6,7 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 public class GUIRadio extends JFrame{
     
-    GUIRadio(){
+    public GUIRadio(){
         setTitle("Radio");
 		setSize(800, 600);
 		setLayout(new BorderLayout());

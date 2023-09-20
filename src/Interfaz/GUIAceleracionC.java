@@ -1,23 +1,22 @@
 package Interfaz;
 
-
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
-public class GUIAceleracionC extends JFrame{
-    
-    GUIAceleracionC(){
+
+public class GUIAceleracionC extends JFrame {
+
+    public GUIAceleracionC() {
         setTitle("Aceleracion Centripeta");
-		setSize(800, 600);
-		setLayout(new BorderLayout());
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setResizable(true);
+        setSize(800, 600);
+        setLayout(new BorderLayout());
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setResizable(true);
 
-		begin();
+        begin();
 
-		setVisible(true);
+        setVisible(true);
     }
-
 
     public void begin() {
 
@@ -27,13 +26,12 @@ public class GUIAceleracionC extends JFrame{
 
     }
 
-private void addComponents() {
+    private void beginComponents() {
 
+    }
 
-}
+    private void addComponents() {
 
-private void beginComponents() {
-    
-}
+    }
 
 }

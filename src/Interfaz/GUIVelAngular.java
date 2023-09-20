@@ -6,7 +6,7 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 public class GUIVelAngular extends JFrame{
     
-    GUIVelAngular(){
+    public GUIVelAngular(){
         setTitle("Velocidad Angular");
 		setSize(800, 600);
 		setLayout(new BorderLayout());

@@ -7,7 +7,7 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 public class GUIFrecuencia extends JFrame{
     
-    GUIFrecuencia(){
+    public GUIFrecuencia(){
         setTitle("Frecuencia");
 		setSize(800, 600);
 		setLayout(new BorderLayout());
