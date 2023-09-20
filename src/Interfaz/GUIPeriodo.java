@@ -3,14 +3,16 @@
 package Interfaz;
 
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class GUIPeriodo extends JFrame{
 
-  private JButton btnFormula1, btnFormula2, btnFormula3;
+  private JButton btnFormula1, btnFormula2,btnFormula3;
   private JTextField descripcion1,descripcion2,descripcion3;
 
   public GUIPeriodo() {
@@ -36,18 +38,28 @@ public class GUIPeriodo extends JFrame{
         }
 
     private void addComponents() {
-
+       JPanel panel = new JPanel();
+       panel.setLayout(new GridLayout(2, 2));
+        
+       panel.add(descripcion1);
+       panel.add(descripcion2);
+        panel.add(descripcion3);
+       panel.add(btnFormula1);
+       panel.add(btnFormula2);
+       panel.add(btnFormula3);
+       
+        this.add(panel, BorderLayout.SOUTH);
 
     }
 
     private void beginComponents() {
-      btnFormula1 = new JButton("Ingresar Datos");
+    btnFormula1 = new JButton("Ingresar Datos");
 		btnFormula2 = new JButton("Ingresar Datos");
 		btnFormula3 = new JButton("Ingresar Datos"); 
     
     descripcion1= new JTextField("Calcular periodo con la formula general");
-     descripcion2= new JTextField("Calcular periodo despejando la formula de velocidad angular");
-      descripcion3= new JTextField("Calcular periodo despejando la formula de velocidad lineal");
+     descripcion2= new JTextField("Calcular periodo despejando \nla formula de velocidad angular");
+      descripcion3= new JTextField("Calcular periodo despejando\n la formula de velocidad lineal");
     }
     
 }
