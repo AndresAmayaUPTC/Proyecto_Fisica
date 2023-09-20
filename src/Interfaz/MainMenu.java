@@ -14,7 +14,7 @@ public class MainMenu extends JFrame {
 		setSize(800, 600);
 		setLayout(new BorderLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setResizable(false);
+		setResizable(true);
 
 		begin();
 
@@ -114,6 +114,11 @@ public class MainMenu extends JFrame {
 		gifLabel.setPreferredSize(new Dimension(anchoDeseado, altoCalculado));
 
 		this.add(gifPanel, BorderLayout.CENTER);
+
+		btnPeriodo.addActionListener((e) -> {
+			
+            dispose();
+        });
 
 	}
 }
