@@ -11,8 +11,8 @@ public class MainMenu extends JFrame {
 			btnRadio;
 
 	public MainMenu() {
-		setTitle("Movimineto Circular Uniforme");
-		setSize(800, 600);
+		setTitle("Calculadora Movimineto Circular Uniforme Acelerado");
+		setSize(1000, 700);
 		setLayout(new BorderLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(true);
@@ -54,34 +54,17 @@ public class MainMenu extends JFrame {
 
 		JScrollPane scrollPane = new JScrollPane(textArea);
 
-		String contenido = "\"El movimiento circular uniforme (MCU) es un concepto fundamental en la física que describe el movimiento de un objeto que se desplaza en una trayectoria circular a una velocidad constante. En este tipo de movimiento, la magnitud de la velocidad del objeto permanece constante, pero su dirección cambia constantemente a lo largo de la trayectoria circular. El MCU se caracteriza por tener una aceleración centrípeta que actúa hacia el centro de la trayectoria y es necesaria para mantener al objeto en movimiento circular.\n"
-				+ //
-				"\n" + //
-				"\" +\r\n" + //
-				"    \"El MCU tiene aplicaciones en una amplia variedad de campos, incluyendo la física, la ingeniería y la astronomía. Algunos aspectos clave sobre el MCU son:\\n"
-				+ //
-				"\\n" + //
-				"\" +\r\n" + //
-				"    \"1. Velocidad constante: En el MCU, la velocidad del objeto se mantiene constante. Esto significa que el objeto recorre distancias iguales en intervalos de tiempo iguales mientras se desplaza en su trayectoria circular.\\n"
-				+ //
-				"\\n" + //
-				"\" +\r\n" + //
-				"    \"2. Aceleración centrípeta: Aunque la velocidad es constante en magnitud, la dirección de la velocidad cambia constantemente debido a la aceleración centrípeta. Esta aceleración es necesaria para mantener al objeto en su trayectoria circular y evitar que se mueva en línea recta.\\n"
-				+ //
-				"\\n" + //
-				"\" +\r\n" + //
-				"    \"3. Aplicaciones en la vida real: El MCU tiene aplicaciones prácticas en la vida cotidiana y la tecnología. Por ejemplo, se utiliza en la construcción de ruedas de ferrocarril y automóviles, así como en dispositivos como centrifugadoras y ejes giratorios en máquinas.\\n"
-				+ //
-				"\\n" + //
-				"\" +\r\n" + //
-				"    \"4. Astronomía: En la astronomía, el MCU se utiliza para describir el movimiento de planetas y satélites alrededor de estrellas y planetas. Los planetas, como la Tierra, siguen trayectorias cercanas al MCU alrededor del Sol.\\n"
-				+ //
-				"\\n" + //
-				"\" +\r\n" + //
-				"    \"5. Desarrollo de la teoría de la relatividad: Albert Einstein desarrolló su teoría de la relatividad especial en parte debido a la necesidad de reconciliar las leyes del MCU con los principios de la relatividad, lo que llevó a avances significativos en nuestra comprensión de la física fundamental.\\n"
-				+ //
-				"\\n" + //
-				"\" +\r\n";
+		String contenido ="El movimiento circular uniformemente acelerado (MCUA) es un fenómeno físico que describe el movimiento de un objeto que se desplaza en una trayectoria circular, pero a diferencia del movimiento circular uniforme (MCU), en el MCUA, la velocidad del objeto no permanece constante; en cambio, experimenta una aceleración constante a lo largo de su trayectoria circular.\n\n" +
+		"Este tipo de movimiento es fundamental en la física y tiene aplicaciones en diversas áreas, incluyendo la ingeniería, la astronáutica, la mecánica y la física teórica. Aquí hay una descripción más detallada:\n\n" +
+		"Características del Movimiento Circular Uniformemente Acelerado (MCUA):\n" +
+		"1. Aceleración Tangencial Constante: En el MCUA, el objeto en movimiento experimenta una aceleración tangencial constante. Esto significa que su velocidad angular (la velocidad a la que gira alrededor del centro de la trayectoria) cambia de manera uniforme a lo largo del tiempo.\n" +
+		"2. Cambios en la Velocidad Lineal: La aceleración tangencial constante provoca cambios en la velocidad lineal del objeto. La velocidad lineal es la velocidad a lo largo de la trayectoria circular y también cambia de manera uniforme.\n" +
+		"3. Presencia de una Fuerza Centrípeta: Para que un objeto se mueva en una trayectoria circular, debe experimentar una fuerza centrípeta dirigida hacia el centro de la circunferencia. En el MCUA, esta fuerza centrípeta es la responsable de la aceleración constante.\n\n" +
+		"Aplicaciones del MCUA:\n" +
+		"1. Dinámica de Vehículos: El MCUA es esencial para comprender el movimiento de vehículos en curvas, como automóviles, aviones y trenes. La aceleración centrípeta es fundamental para garantizar que estos vehículos puedan mantenerse en su trayectoria sin salirse de la carretera o las vías.\n" +
+		"2. Satélites en Órbita: Los satélites en órbita alrededor de la Tierra siguen trayectorias circulares o elípticas, y su movimiento se describe mediante el MCUA. Comprender este tipo de movimiento es crucial para la navegación y la comunicación por satélite.\n" +
+		"3. Teoría de la Física: El MCUA es un tema importante en la física teórica y se utiliza en la formulación de leyes y principios físicos. Ayuda a explicar cómo los objetos se mueven en campos gravitatorios, eléctricos y magnéticos, entre otros.\n\n" ;
+	
 		textArea.setText(contenido);
 		setLocationRelativeTo(null);
 
