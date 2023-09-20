@@ -3,8 +3,11 @@ package Interfaz;
 
 import java.awt.BorderLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 public class GUIVelAngular extends JFrame{
+
+    private JButton btnVolver;
     
     public GUIVelAngular(){
         setTitle("Velocidad Angular");
@@ -27,13 +30,21 @@ public class GUIVelAngular extends JFrame{
 
     }
 
-private void addComponents() {
+ private void beginComponents() {
+
+        btnVolver = new JButton("Volver");
+    }
+
+    private void addComponents() {
 
 
-}
+        this.add(btnVolver, BorderLayout.SOUTH);
 
-private void beginComponents() {
-    
-}
+
+        btnVolver.addActionListener((e) -> {
+			new MainMenu();
+            dispose();
+        });
+    }
 
 }
