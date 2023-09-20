@@ -1,3 +1,4 @@
+package Logic;
 public class Metodos {
     double piValue = Math.PI;
 
