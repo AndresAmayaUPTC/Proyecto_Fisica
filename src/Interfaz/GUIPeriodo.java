@@ -67,6 +67,8 @@ public class GUIPeriodo extends JFrame {
 
   private void beginComponents() {
 
+    Metodos m =new Metodos();
+
     btnVolver = new JButton("Volver");
     btnFormula1 = new JButton("Ingresar Datos");
     btnFormula2 = new JButton("Ingresar Datos");
@@ -79,9 +81,41 @@ public class GUIPeriodo extends JFrame {
 
     btnFormula1.addActionListener((e) -> {
 
-      Metodos m =new Metodos();
-			double tiempo=Double.parseDouble(JOptionPane.showInputDialog("Ingrese El tiempo"));
+      
+			double tiempo=Double.parseDouble(JOptionPane.showInputDialog("Ingrese El tiempo (en segundos)"));
       double vueltas=Double.parseDouble(JOptionPane.showInputDialog("Ingrese El numero de vueltas"));
+
+      double resultado=m.calcularperiodoFormula(tiempo, vueltas);
+
+      JOptionPane.showMessageDialog(null,"El Periodo es \n"+resultado);
+
+
+        });
+
+
+        btnFormula2.addActionListener((e) -> {
+
+      
+			double vAngular=Double.parseDouble(JOptionPane.showInputDialog("Ingrese La velocidad angular"));
+      
+
+      double resultado=m.calcularperiodoFormulaVangular(vAngular);
+
+      JOptionPane.showMessageDialog(null,"El periodo es \n"+resultado);
+
+
+        });
+
+        btnFormula3.addActionListener((e) -> {
+
+      
+			double radio=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio"));
+      double vLineal=Double.parseDouble(JOptionPane.showInputDialog("Ingrese La velocidad lineal (en m/s)"));
+      
+
+      double resultado=m.calcularperiodoFormulaVlineal(radio,vLineal);
+
+      JOptionPane.showMessageDialog(null,"El periodo es \n"+resultado);
 
 
         });
