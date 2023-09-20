@@ -6,7 +6,7 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 public class GUIVelLineal extends JFrame{
     
-    GUIVelLineal(){
+    public GUIVelLineal(){
         setTitle("Velocidad Lineal");
 		setSize(800, 600);
 		setLayout(new BorderLayout());

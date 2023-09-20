@@ -6,7 +6,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-class GUIPeriodo extends JFrame{
+public class GUIPeriodo extends JFrame{
 
   public GUIPeriodo() {
         setTitle("Periodo");

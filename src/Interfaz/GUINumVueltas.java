@@ -6,7 +6,7 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 public class GUINumVueltas extends JFrame{
     
-    GUINumVueltas(){
+    public GUINumVueltas(){
         setTitle("Numero De Vueltas");
 		setSize(800, 600);
 		setLayout(new BorderLayout());

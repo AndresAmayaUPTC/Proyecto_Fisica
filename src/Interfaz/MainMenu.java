@@ -1,4 +1,5 @@
 package Interfaz;
+import Interfaz.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -116,7 +117,42 @@ public class MainMenu extends JFrame {
 		this.add(gifPanel, BorderLayout.CENTER);
 
 		btnPeriodo.addActionListener((e) -> {
-			
+			new GUIPeriodo();
+            dispose();
+        });
+
+		btnTiempo.addActionListener((e) -> {
+			new GUITiempo();
+            dispose();
+        });
+
+		btnNumVueltas.addActionListener((e) -> {
+			new GUINumVueltas();
+            dispose();
+        });
+
+		btnFrecuencia.addActionListener((e) -> {
+			new GUIFrecuencia();
+            dispose();
+        });
+
+		btnVelLineal.addActionListener((e) -> {
+			new GUIVelLineal();
+            dispose();
+        });
+
+		btnVelAngular.addActionListener((e) -> {
+			new GUIVelAngular();
+            dispose();
+        });
+
+		btnAceleracionC.addActionListener((e) -> {
+			new GUIAceleracionC();
+            dispose();
+        });
+
+		btnRadio.addActionListener((e) -> {
+			new GUIRadio();
             dispose();
         });
 
