@@ -2,9 +2,13 @@ package Interfaz;
 
 import java.awt.BorderLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class GUIAceleracionC extends JFrame {
+
+
+    private JButton btnVolver;
 
     public GUIAceleracionC() {
         setTitle("Aceleracion Centripeta");
@@ -28,10 +32,19 @@ public class GUIAceleracionC extends JFrame {
 
     private void beginComponents() {
 
+        btnVolver = new JButton("Volver");
     }
 
     private void addComponents() {
 
+
+        this.add(btnVolver, BorderLayout.SOUTH);
+
+
+        btnVolver.addActionListener((e) -> {
+			new MainMenu();
+            dispose();
+        });
     }
 
 }
