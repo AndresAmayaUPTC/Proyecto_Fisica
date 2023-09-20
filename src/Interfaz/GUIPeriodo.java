@@ -25,6 +25,7 @@ public class GUIPeriodo extends JFrame {
     setLayout(new BorderLayout());
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setResizable(true);
+    setLocationRelativeTo(null);
 
     begin();
 
@@ -41,6 +42,10 @@ public class GUIPeriodo extends JFrame {
   }
 
   private void addComponents() {
+
+    descripcion1.setEditable(false);
+    descripcion2.setEditable(false);
+    descripcion3.setEditable(false);
 
     this.add(btnVolver, BorderLayout.SOUTH);
 
@@ -115,7 +120,7 @@ public class GUIPeriodo extends JFrame {
 
       double resultado=m.calcularperiodoFormulaVlineal(radio,vLineal);
 
-      JOptionPane.showMessageDialog(null,"El periodo es \n"+resultado);
+      JOptionPane.showMessageDialog(this,"El periodo es \n"+resultado);
 
 
         });

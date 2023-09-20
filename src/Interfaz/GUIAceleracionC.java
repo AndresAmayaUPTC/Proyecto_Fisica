@@ -23,6 +23,7 @@ public class GUIAceleracionC extends JFrame {
         setLayout(new BorderLayout());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(true);
+        setLocationRelativeTo(null);
 
         begin();
 
@@ -57,6 +58,9 @@ public class GUIAceleracionC extends JFrame {
         });
 
         btnFormula2.addActionListener((e) -> {
+
+            descripcion1.setEditable(false);
+            descripcion2.setEditable(false);
 
             double vAngular = Double.parseDouble(JOptionPane.showInputDialog("Ingrese La velocidad angular"));
              double radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio"));

@@ -1,4 +1,5 @@
 package Interfaz;
+import Logic.Metodos;
 
 
 import java.awt.BorderLayout;
@@ -6,6 +7,7 @@ import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -21,6 +23,7 @@ public class GUITiempo extends  JFrame {
 		setLayout(new BorderLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(true);
+        setLocationRelativeTo(null);
 
 		begin();
 
@@ -48,7 +51,10 @@ public class GUITiempo extends  JFrame {
 
     private void addComponents() {
 
+        Metodos m=new Metodos();
 
+        descripcion1.setEditable(false);
+        descripcion2.setEditable(false);
         this.add(btnVolver, BorderLayout.SOUTH);
 
 
@@ -65,6 +71,32 @@ public class GUITiempo extends  JFrame {
         panel.add(btnFormula1);
         panel.add(btnFormula2);
         this.add(panel, BorderLayout.NORTH);
+
+
+        btnFormula1.addActionListener((e) -> {
+
+            double periodo = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el periodo"));
+            double vueltas = Double.parseDouble(JOptionPane.showInputDialog("Ingrese numero de vueltas"));
+
+            double resultado = m.calcularTiempoFormuPeriodo(periodo, vueltas);
+
+            JOptionPane.showMessageDialog(this, "El tiempo es es \n" + resultado);
+
+        });
+
+
+        btnFormula2.addActionListener((e) -> {
+
+    
+            double vueltas = Double.parseDouble(JOptionPane.showInputDialog("Ingrese numero de vueltas"));
+            double frecuencia = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la frecuencia"));
+
+            double resultado = m.calcularTiempoFormuFrecuencia(vueltas,frecuencia);
+
+            JOptionPane.showMessageDialog(this, "El tiempo es es \n" + resultado);
+
+        });
+
     }
 
 

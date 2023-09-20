@@ -16,6 +16,7 @@ public class MainMenu extends JFrame {
 		setLayout(new BorderLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(true);
+		setLocationRelativeTo(null);
 
 		begin();
 

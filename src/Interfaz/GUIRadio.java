@@ -1,10 +1,12 @@
 package Interfaz;
+import Logic.Metodos;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -20,6 +22,7 @@ public class GUIRadio extends JFrame {
         setLayout(new BorderLayout());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(true);
+        setLocationRelativeTo(null);
 
         begin();
 
@@ -45,6 +48,10 @@ public class GUIRadio extends JFrame {
 
     private void addComponents() {
 
+        Metodos m=new Metodos();
+
+        descripcion1.setEditable(false);
+        descripcion2.setEditable(false);
         this.add(btnVolver, BorderLayout.SOUTH);
 
         btnVolver.addActionListener((e) -> {
@@ -59,6 +66,31 @@ public class GUIRadio extends JFrame {
         panel.add(btnFormula1);
         panel.add(btnFormula2);
         this.add(panel, BorderLayout.NORTH);
+
+
+
+        btnFormula1.addActionListener((e) -> {
+
+            double aceleracion = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la aceleracin"));
+            double velLineal = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la velocidad lineal"));
+
+            double resultado = m.calcularRadio(aceleracion, velLineal);
+
+            JOptionPane.showMessageDialog(this, "El radio es \n" + resultado);
+
+        });
+
+
+        btnFormula2.addActionListener((e) -> {
+
+            double velLineal = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la velocidad lineal"));
+            double periodo = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el periodo"));
+
+            double resultado = m.calcularRadiodespejeVelocidad(velLineal, periodo);
+
+            JOptionPane.showMessageDialog(this, "El radio es \n" + resultado);
+
+        });
     }
 
 }
