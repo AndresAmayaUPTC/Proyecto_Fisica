@@ -14,10 +14,7 @@ public class GUIFrecuencia extends JFrame {
     private JButton btnVolver;
     private JButton btnFormula1;
     private JTextField descripcion1;
-
     
-    
-
     public GUIFrecuencia() {
         setTitle("Frecuencia");
         setSize(1100, 150);

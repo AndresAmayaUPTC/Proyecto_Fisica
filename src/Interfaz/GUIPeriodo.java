@@ -1,13 +1,17 @@
 
 package Interfaz;
 
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import Logic.Metodos;
 
 public class GUIPeriodo extends JFrame {
 
@@ -71,6 +75,16 @@ public class GUIPeriodo extends JFrame {
     descripcion1 = new JTextField("Calcular periodo con la formula general");
     descripcion2 = new JTextField("Calcular periodo despejando \nla formula de velocidad angular");
     descripcion3 = new JTextField("Calcular periodo despejando\n la formula de velocidad lineal");
+
+
+    btnFormula1.addActionListener((e) -> {
+
+      Metodos m =new Metodos();
+			double tiempo=Double.parseDouble(JOptionPane.showInputDialog("Ingrese El tiempo"));
+      double vueltas=Double.parseDouble(JOptionPane.showInputDialog("Ingrese El numero de vueltas"));
+
+
+        });
   }
 
 }
