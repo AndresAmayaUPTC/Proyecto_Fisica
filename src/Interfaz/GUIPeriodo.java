@@ -17,7 +17,7 @@ public class GUIPeriodo extends JFrame {
 
   public GUIPeriodo() {
     setTitle("Periodo");
-    setSize(800, 600);
+    setSize(1100, 150);
     setLayout(new BorderLayout());
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setResizable(true);
