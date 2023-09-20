@@ -41,7 +41,7 @@ public class GUITiempo extends  JFrame {
         btnVolver = new JButton("Volver");
          btnFormula1 = new JButton("Ingresar Datos");
         btnFormula2 = new JButton("Ingresar Datos");
-        descripcion1 = new JTextField("Calcular el tiempo despejando la formula de perido");
+        descripcion1 = new JTextField("Calcular el tiempo dSespejando la formula de periodo");
         descripcion2 = new JTextField("Calcular el tiempo  despejando la formula de frecuencia ");
 
     }
