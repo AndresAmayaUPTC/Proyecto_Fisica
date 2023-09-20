@@ -9,6 +9,7 @@ public class GUINumVueltas extends JFrame{
 
     private JButton btnVolver;
     
+    
     public GUINumVueltas(){
         setTitle("Numero De Vueltas");
 		setSize(800, 600);
