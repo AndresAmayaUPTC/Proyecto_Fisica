@@ -8,6 +8,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Logic.Metodos;
+
 public class GUIVelLineal extends JFrame {
 
     private JButton btnVolver;
@@ -44,6 +46,8 @@ public class GUIVelLineal extends JFrame {
     }
 
     private void addComponents() {
+        
+    Metodos m =new Metodos();
 
         this.add(btnVolver, BorderLayout.SOUTH);
 

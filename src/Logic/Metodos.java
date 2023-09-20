@@ -6,7 +6,7 @@ public class Metodos {
     }
     
     public double calcularTiempoFormuFrecuencia(double nvueltas,double frecuencia){
-    return nvueltas*frecuencia;
+    return nvueltas/frecuencia;
     }
 
     public double calcularNdevueltasFormuFrecuencia(double frecuencia ,double tiempo){
@@ -14,7 +14,7 @@ public class Metodos {
     }
  
     public double calcularNdevueltasFormuPeriodo(double periodo,double tiempo){
-    return periodo*tiempo;
+    return tiempo/periodo;
     }
 
     public double calcularperiodoFormula(double tiempo,double nvueltas){ 

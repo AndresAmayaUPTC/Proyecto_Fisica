@@ -38,31 +38,12 @@ public class GUIAceleracionC extends JFrame {
     }
 
     private void beginComponents() {
-
+        Metodos m =new Metodos();
         btnVolver = new JButton("Volver");
         btnFormula1 = new JButton("Ingresar Datos");
         btnFormula2 = new JButton("Ingresar Datos");
         descripcion1 = new JTextField("Calcular la aceleracion utilizando la velocidad lineal");
         descripcion2 = new JTextField("Calcular la aceleracion utilizando la velocidad angular");
-    }
-
-    private void addComponents() {
-        Metodos m =new Metodos();
-
-        this.add(btnVolver, BorderLayout.SOUTH);
-
-        btnVolver.addActionListener((e) -> {
-            new MainMenu();
-            dispose();
-        });
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(2, 2));
-        panel.add(descripcion1);
-        panel.add(descripcion2);
-        panel.add(btnFormula1);
-        panel.add(btnFormula2);
-
-        this.add(panel, BorderLayout.NORTH);
 
         btnFormula1.addActionListener((e) -> {
 
@@ -85,6 +66,23 @@ public class GUIAceleracionC extends JFrame {
             JOptionPane.showMessageDialog(null, "La aceleracion centripeta es:\n" + resultado);
 
         });
+    }
+
+    private void addComponents() {
+        this.add(btnVolver, BorderLayout.SOUTH);
+
+        btnVolver.addActionListener((e) -> {
+            new MainMenu();
+            dispose();
+        });
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(2, 2));
+        panel.add(descripcion1);
+        panel.add(descripcion2);
+        panel.add(btnFormula1);
+        panel.add(btnFormula2);
+
+        this.add(panel, BorderLayout.NORTH); 
 
     }
 
