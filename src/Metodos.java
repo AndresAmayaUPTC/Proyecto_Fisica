@@ -1,4 +1,7 @@
+
+
 public class Metodos {
+  
     double piValue = Math.PI;
 
     public double calcularperiodoFormula(double tiempo,double nvueltas){ 

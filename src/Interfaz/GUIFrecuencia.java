@@ -3,17 +3,20 @@ package Interfaz;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
 
 public class GUIFrecuencia extends JFrame {
 
     private JButton btnVolver;
     private JButton btnFormula1;
     private JTextField descripcion1;
+
+    
+    
 
     public GUIFrecuencia() {
         setTitle("Frecuencia");
