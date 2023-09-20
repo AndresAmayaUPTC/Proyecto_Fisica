@@ -23,6 +23,7 @@ public class GUIVelLineal extends JFrame {
         setLayout(new BorderLayout());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(true);
+        setLocationRelativeTo(null);
 
         begin();
 
@@ -71,6 +72,9 @@ public class GUIVelLineal extends JFrame {
     }
 
     private void addComponents() {
+
+        descripcion1.setEditable(false);
+        descripcion2.setEditable(false);
 
         this.add(btnVolver, BorderLayout.SOUTH);
 
