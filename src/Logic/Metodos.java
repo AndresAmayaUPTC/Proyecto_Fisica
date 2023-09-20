@@ -1,6 +1,21 @@
 package Logic;
 public class Metodos {
     double piValue = Math.PI;
+    public double calcularTiempoFormuPeriodo(double periodo,double nvueltas){
+      return periodo*nvueltas;
+    }
+    
+    public double calcularTiempoFormuFrecuencia(double nvueltas,double frecuencia){
+    return nvueltas*frecuencia;
+    }
+
+    public double calcularNdevueltasFormuFrecuencia(double frecuencia ,double tiempo){
+    return frecuencia*tiempo;
+    }
+ 
+    public double calcularNdevueltasFormuPeriodo(double periodo,double tiempo){
+    return periodo*tiempo;
+    }
 
     public double calcularperiodoFormula(double tiempo,double nvueltas){ 
      return tiempo/nvueltas;

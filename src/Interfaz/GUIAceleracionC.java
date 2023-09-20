@@ -5,8 +5,11 @@ import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import Logic.Metodos;
 
 public class GUIAceleracionC extends JFrame {
 
@@ -44,6 +47,7 @@ public class GUIAceleracionC extends JFrame {
     }
 
     private void addComponents() {
+        Metodos m =new Metodos();
 
         this.add(btnVolver, BorderLayout.SOUTH);
 
@@ -59,6 +63,29 @@ public class GUIAceleracionC extends JFrame {
         panel.add(btnFormula2);
 
         this.add(panel, BorderLayout.NORTH);
+
+        btnFormula1.addActionListener((e) -> {
+
+            double velocidadlineal = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la velocidad lineal"));
+            double radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio"));
+
+            double resultado = m.calcularAceleracion(velocidadlineal, radio);
+
+            JOptionPane.showMessageDialog(null, "La aceleracion centripeta es: \n" + resultado);
+
+        });
+
+        btnFormula2.addActionListener((e) -> {
+
+            double vAngular = Double.parseDouble(JOptionPane.showInputDialog("Ingrese La velocidad angular"));
+             double radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio"));
+
+            double resultado = m.calcularAceleracionFormula2(vAngular, radio);
+
+            JOptionPane.showMessageDialog(null, "La aceleracion centripeta es:\n" + resultado);
+
+        });
+
     }
 
 }
