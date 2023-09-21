@@ -71,22 +71,20 @@ public class GUINumVueltas extends JFrame {
         this.add(panel, BorderLayout.NORTH);
 
         btnFormula1.addActionListener((e) -> {
-
-            double frecuencia = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la frecuencia"));
+            double periodo = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el periodo"));
             double tiempo = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el tiempo (en segundos)"));
 
-            double resultado = m.calcularNdevueltasFormuFrecuencia(frecuencia, tiempo);
+            double resultado = m.calcularNdevueltasFormuPeriodo(periodo, tiempo);
 
             JOptionPane.showMessageDialog(this, "El numero de vueltas es \n" + resultado);
 
         });
 
         btnFormula2.addActionListener((e) -> {
-
-            double periodo = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el periodo"));
+            double frecuencia = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la frecuencia"));
             double tiempo = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el tiempo (en segundos)"));
 
-            double resultado = m.calcularNdevueltasFormuPeriodo(periodo,tiempo);
+            double resultado = m.calcularNdevueltasFormuFrecuencia(frecuencia, tiempo);
 
             JOptionPane.showMessageDialog(this, "El numero de vueltas es \n" + resultado);
 
